@@ -1,9 +1,12 @@
 import os
 from setuptools import setup
 
-f = open(os.path.join(os.path.dirname(__file__), 'README.md'))
-readme = f.read()
-f.close()
+# bypass readme to fix ascii issue in deployments.
+#f = open(os.path.join(os.path.dirname(__file__), 'README.md'))
+#readme = f.read()
+#f.close()
+readme = 'README...'
+
 
 setup(
     name='django-s3direct',
